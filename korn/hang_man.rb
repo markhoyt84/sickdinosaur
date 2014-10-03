@@ -63,6 +63,8 @@ def done?(hidden_phrase, number_of_wrong)
     end
   end
   puts "you win!"
+  $score -= number_of_wrong
+  $score += 100
   true
 end
 # run program
@@ -100,6 +102,7 @@ def play
   end
   puts "answer: " + answer_phrase
 end
+
 
 play
 
