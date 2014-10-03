@@ -8,8 +8,8 @@ class CreatePhrase < ActiveRecord::Migration
       t.timestamps
     end
 
-    create_table :phrases do |t|
-	    t.string :phrase
+    create_table :games do |t|
+	    t.string :games, :file_name
 	    t.timestamps
     end
 
