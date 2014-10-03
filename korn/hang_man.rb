@@ -1,3 +1,5 @@
+require "faker"
+
 class Letter
   attr_reader :letter
   attr_accessor :hidden
@@ -67,8 +69,8 @@ end
 def play
   puts "Welcome to Hangman!!!!!"
   puts
-  puts "Here is your phrase. Guess away..."
-  answer_phrase = "my dog is so stupid"
+  puts "Here is your color. Guess away..."
+  answer_phrase = Faker::Commerce.color
   hidden_phrase = hide_phrase(answer_phrase)
   show_hidden_phrase(hidden_phrase)
   letters_tried = []
