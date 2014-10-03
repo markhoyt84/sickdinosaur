@@ -44,6 +44,7 @@ def flash_memory
       user_score += 1
       puts "You are correct!"
       puts "Score: #{user_score}"
+      puts "Total Score: #{$score += 50}"
       sleep(2)
       word_list.clear
     else

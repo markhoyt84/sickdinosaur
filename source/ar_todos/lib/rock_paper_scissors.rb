@@ -1,3 +1,5 @@
+require_relative '../todo'
+
 class RPS
   @@user_score = 0
   @@computer_score = 0
@@ -19,6 +21,7 @@ class RPS
             if computer_choice == 'scissors'
               puts "Rock smashes scissors, YOU WIN!"
               @@user_score += 1
+              puts "Total Score: #{$score += 50}"
               sleep_clear
             elsif computer_choice == 'paper'
               puts "Paper wraps rock, YOU LOSE!"
@@ -30,9 +33,10 @@ class RPS
               puts "Scissors cut paper, YOU LOSE!"
               @@computer_score += 1
               sleep_clear
-            elsif computer_choice == 'paper'
-              puts "Paper wraps rock, YOU LOSE!"
+            elsif computer_choice == 'rock'
+              puts "Paper wraps rock, YOU WIN!"
               @@user_score += 1
+              puts "Total Score: #{$score += 50}"
               sleep_clear
             end
           when choice == 'scissors'
@@ -42,6 +46,7 @@ class RPS
               sleep_clear
             elsif computer_choice == 'paper'
               puts "Scissors cut paper, YOU WIN!"
+              puts "Total Score: #{$score += 50}"
               @@user_score += 1
               sleep_clear
             end
