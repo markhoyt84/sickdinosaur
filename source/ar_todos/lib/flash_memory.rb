@@ -2,6 +2,7 @@ require_relative '../todo'
 require 'faker'
 
 def flash_memory
+
   user_score = 0
   difficulty = 0
   word_list = []
