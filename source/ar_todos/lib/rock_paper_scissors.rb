@@ -1,5 +1,3 @@
-require_relative '../todo'
-
 class RPS
   @@user_score = 0
   @@computer_score = 0

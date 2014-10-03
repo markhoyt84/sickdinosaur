@@ -1,3 +1,5 @@
+require "faker"
+
 class Letter
   attr_reader :letter
   attr_accessor :hidden
@@ -61,17 +63,13 @@ def done?(hidden_phrase, number_of_wrong)
     end
   end
   puts "you win!"
-  puts "you won 100 points!"
-  $score -= number_of_wrong * 10
+  $score -= number_of_wrong
   $score += 100
   true
 end
 # run program
 def play
-  puts "Welcome to Hangman!!!!!"
-  puts
-  puts "Here is your phrase. Guess away..."
-  answer_phrase = "my dog is so stupid"
+  answer_phrase = Faker::Commerce.color
   hidden_phrase = hide_phrase(answer_phrase)
   show_hidden_phrase(hidden_phrase)
   letters_tried = []
@@ -102,5 +100,5 @@ def play
   puts "answer: " + answer_phrase
 end
 
-play
 
+play

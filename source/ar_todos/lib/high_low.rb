@@ -9,7 +9,7 @@ def high_low
 
 	puts "Welcome to High/Low, an interactive guessing game"
 	puts "We will select a random number from one to one hundred. You have four guesses to select it"
-
+	sleep(2)
 	our_number = rand(1..100)
 	guesses = 0
 	finished = false
